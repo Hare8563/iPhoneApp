@@ -1,0 +1,15 @@
+//
+//  ViewController.h
+//  Camera
+//
+//  Created by hanasake on 2014/11/08.
+//  Copyright (c) 2014年 Kojima. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface ViewController : UIViewController
+
+
+@end
+
