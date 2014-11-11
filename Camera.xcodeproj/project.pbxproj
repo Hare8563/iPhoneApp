@@ -10,6 +10,7 @@
 		2E0DC0461A10EAE100E975BC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E0DC0451A10EAE100E975BC /* CoreGraphics.framework */; };
 		2E0DC0481A10EC2500E975BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E0DC0471A10EC2500E975BC /* UIKit.framework */; };
 		2E3182EB1A0F4AFF0000B88B /* openCVLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3182EA1A0F4AFF0000B88B /* openCVLib.framework */; };
+		2E4A668C1A1270EB0076CFFB /* ImagePickerDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E4A668B1A1270EB0076CFFB /* ImagePickerDelegate.mm */; };
 		2E77D8F91A11233B00242D72 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E77D8F81A11233B00242D72 /* opencv2.framework */; };
 		2E8AB6631A10EA510034DE2D /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8AB65C1A10EA510034DE2D /* AssetsLibrary.framework */; };
 		2E8AB6641A10EA510034DE2D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8AB65D1A10EA510034DE2D /* AVFoundation.framework */; };
@@ -30,6 +31,8 @@
 		2E0DC0451A10EAE100E975BC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2E0DC0471A10EC2500E975BC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2E3182EA1A0F4AFF0000B88B /* openCVLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = openCVLib.framework; sourceTree = "<group>"; };
+		2E4A668A1A1270EB0076CFFB /* ImagePickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerDelegate.h; sourceTree = "<group>"; };
+		2E4A668B1A1270EB0076CFFB /* ImagePickerDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImagePickerDelegate.mm; sourceTree = "<group>"; };
 		2E77D8F81A11233B00242D72 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../../../../../devLibrary/opencv2.framework; sourceTree = "<group>"; };
 		2E8AB65C1A10EA510034DE2D /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		2E8AB65D1A10EA510034DE2D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -115,6 +118,8 @@
 				B02DA8941A0DBEBA005BE04D /* Main.storyboard */,
 				B02DA8971A0DBEBA005BE04D /* Images.xcassets */,
 				B02DA88A1A0DBEBA005BE04D /* Supporting Files */,
+				2E4A668A1A1270EB0076CFFB /* ImagePickerDelegate.h */,
+				2E4A668B1A1270EB0076CFFB /* ImagePickerDelegate.mm */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				B02DA8931A0DBEBA005BE04D /* ViewController.mm in Sources */,
 				B02DA8901A0DBEBA005BE04D /* AppDelegate.m in Sources */,
 				B02DA88D1A0DBEBA005BE04D /* main.m in Sources */,
+				2E4A668C1A1270EB0076CFFB /* ImagePickerDelegate.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

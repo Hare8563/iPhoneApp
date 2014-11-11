@@ -7,12 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "ImagePickerDelegate.h"
 #import <opencv2/highgui/ios.h>
 
 @interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 
-@property (strong, nonatomic) ALAssetsLibrary* library;
+@property (strong, nonatomic) UIImagePickerController* picker;
 @end
 
 @implementation ViewController
@@ -22,6 +23,7 @@ BOOL grayflag=false;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _picker = [[UIImagePickerController alloc] init];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -35,10 +37,9 @@ BOOL grayflag=false;
     = UIImagePickerControllerSourceTypeCamera;
     
     if([UIImagePickerController isSourceTypeAvailable:sourceType]){
-        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-        picker.sourceType = sourceType;
-        picker.delegate = self;
-        [self presentViewController:picker animated:YES completion:NULL];
+        _picker.sourceType = sourceType;
+        _picker.delegate = self;
+        [self presentViewController:_picker animated:YES completion:NULL];
     }
 }
 
@@ -46,59 +47,65 @@ BOOL grayflag=false;
 - (void)imagePickerController :(UIImagePickerController *)picker
         didFinishPickingImage :(UIImage *)image editingInfo :(NSDictionary *)editingInfo {
     
-    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
-    self.library = [[ALAssetsLibrary alloc] init];
-    
-    
-    [self.library enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos usingBlock:
-     ^(ALAssetsGroup *group, BOOL *stop)
-     {
-         NSMutableArray* assetImages = [NSMutableArray array];
-         std::vector<cv::Mat> IV;
-         if(group){
-             
-             
-             
-             //コールバック関数を実装
-             ALAssetsGroupEnumerationResultsBlock assetsEnumerationBlock =
-             ^(ALAsset *asset, NSUInteger index, BOOL *stop)
-             {
-                 
-                 if (asset)
+    if(picker.sourceType == UIImagePickerControllerSourceTypeCamera){
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+        [self dismissViewControllerAnimated:YES completion:nil];
+        
+        _picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        [self presentViewController:_picker animated:YES completion:NULL];
+    }
+    else{
+        ALAssetsLibrary* library;
+        library = [[ALAssetsLibrary alloc] init];
+        
+        
+        [library enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos usingBlock:
+         ^(ALAssetsGroup *group, BOOL *stop)
+         {
+             NSMutableArray* assetImages = [NSMutableArray array];
+             std::vector<cv::Mat> IV;
+             if(group){
+                 //コールバック関数を実装
+                 ALAssetsGroupEnumerationResultsBlock assetsEnumerationBlock =
+                 ^(ALAsset *asset, NSUInteger index, BOOL *stop)
                  {
-                     //ALAssetRepresentationクラスのインスタンスを作成
-                     //assetはALAssetのインスタンス
-                     ALAssetRepresentation *rep = [asset defaultRepresentation];
-                     UIImage *img = [[UIImage alloc] initWithCGImage:[rep fullScreenImage]];
-                     [assetImages addObject:img];
+                     
+                     if (asset)
+                     {
+                         //ALAssetRepresentationクラスのインスタンスを作成
+                         //assetはALAssetのインスタンス
+                         ALAssetRepresentation *rep = [asset defaultRepresentation];
+                         UIImage *img = [[UIImage alloc] initWithCGImage:[rep fullScreenImage]];
+                         [assetImages addObject:img];
+                     }
+                 };
+                 
+                 //アセットの取得
+                 [group enumerateAssetsUsingBlock:assetsEnumerationBlock];
+                 
+                 
+                 for (UIImage* img in assetImages) {
+                     cv::Mat M;
+                     UIImageToMat(img, M);
+                     IV.push_back(M);
                  }
-             };
-             
-             //アセットの取得
-             [group enumerateAssetsUsingBlock:assetsEnumerationBlock];
-             
-             
-             for (UIImage* img in assetImages) {
-                 cv::Mat M;
-                 UIImageToMat(img, M);
-                 IV.push_back(M);
+                 
+                 UIImage* baseImg = [UIImage imageNamed:@"lena.jpg"];
+                 cv::Mat bM;
+                 UIImageToMat(baseImg, bM);
+                 CPP::CvLib *lib = new CPP::CvLib(30);
+                 cv::Mat res = lib->makeMozArt(bM, IV);
+                 self.imageView.image = MatToUIImage(res);
              }
-             
-             UIImage* baseImg = [UIImage imageNamed:@"lena.jpg"];
-             cv::Mat bM;
-             UIImageToMat(baseImg, bM);
-             CPP::CvLib *lib = new CPP::CvLib(30);
-             cv::Mat res = lib->makeMozArt(bM, IV);
-             self.imageView.image = MatToUIImage(res);
-             defaultIMG = self.imageView.image;
-         }
-     } failureBlock:nil];
-    
-    self.grayButton.enabled = true;
-    self.BlurButton.enabled = true;
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-}  
+         } failureBlock:nil];
+        [self dismissViewControllerAnimated:YES completion:nil];
+        
+        self.grayButton.enabled = true;
+        self.BlurButton.enabled = true;
+    }
+        
+
+}
 
 
 - (IBAction)GrayButtonAction:(id)sender {
