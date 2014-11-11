@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AssetsLibrary/AssetsLibrary.h>
+#import <openCVLib/openCVLib.h>
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *grayButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *BlurButton;
+- (IBAction)GrayButtonAction:(id)sender;
+- (IBAction)BlurButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
