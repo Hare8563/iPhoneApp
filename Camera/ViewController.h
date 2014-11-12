@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <openCVLib/openCVLib.h>
+#import "imageViewController.h"
 
-@interface ViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface ViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate,imageViewDelegate>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *grayButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *BlurButton;
 - (IBAction)GrayButtonAction:(id)sender;
 - (IBAction)BlurButton:(id)sender;
+-(void)modalViewDidDissmissed:(NSInteger)tag;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

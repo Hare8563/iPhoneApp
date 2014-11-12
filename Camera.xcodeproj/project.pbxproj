@@ -12,6 +12,7 @@
 		2E3182EB1A0F4AFF0000B88B /* openCVLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3182EA1A0F4AFF0000B88B /* openCVLib.framework */; };
 		2E4A668C1A1270EB0076CFFB /* ImagePickerDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E4A668B1A1270EB0076CFFB /* ImagePickerDelegate.mm */; };
 		2E4A668F1A1318DE0076CFFB /* imageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4A668E1A1318DE0076CFFB /* imageViewController.m */; };
+		2E4A66911A13C8B80076CFFB /* 3071.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E4A66901A13C8B80076CFFB /* 3071.png */; };
 		2E77D8F91A11233B00242D72 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E77D8F81A11233B00242D72 /* opencv2.framework */; };
 		2E8AB6631A10EA510034DE2D /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8AB65C1A10EA510034DE2D /* AssetsLibrary.framework */; };
 		2E8AB6641A10EA510034DE2D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8AB65D1A10EA510034DE2D /* AVFoundation.framework */; };
@@ -36,6 +37,7 @@
 		2E4A668B1A1270EB0076CFFB /* ImagePickerDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImagePickerDelegate.mm; sourceTree = "<group>"; };
 		2E4A668D1A1318DE0076CFFB /* imageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageViewController.h; sourceTree = "<group>"; };
 		2E4A668E1A1318DE0076CFFB /* imageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imageViewController.m; sourceTree = "<group>"; };
+		2E4A66901A13C8B80076CFFB /* 3071.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3071.png; sourceTree = "<group>"; };
 		2E77D8F81A11233B00242D72 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../../../../../devLibrary/opencv2.framework; sourceTree = "<group>"; };
 		2E8AB65C1A10EA510034DE2D /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		2E8AB65D1A10EA510034DE2D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -115,6 +117,7 @@
 			children = (
 				B02DA88E1A0DBEBA005BE04D /* AppDelegate.h */,
 				2EE06FF91A0FA69F0099B820 /* lena.jpg */,
+				2E4A66901A13C8B80076CFFB /* 3071.png */,
 				B02DA88F1A0DBEBA005BE04D /* AppDelegate.m */,
 				B02DA8911A0DBEBA005BE04D /* ViewController.h */,
 				B02DA8921A0DBEBA005BE04D /* ViewController.mm */,
@@ -219,6 +222,7 @@
 				B02DA8961A0DBEBA005BE04D /* Main.storyboard in Resources */,
 				B02DA8981A0DBEBA005BE04D /* Images.xcassets in Resources */,
 				2EE06FFA1A0FA69F0099B820 /* lena.jpg in Resources */,
+				2E4A66911A13C8B80076CFFB /* 3071.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -46,15 +46,7 @@ BOOL grayflag=false;
 
 - (void)imagePickerController :(UIImagePickerController *)picker
         didFinishPickingImage :(UIImage *)image editingInfo :(NSDictionary *)editingInfo {
-    
-    if(picker.sourceType == UIImagePickerControllerSourceTypeCamera){
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
-        [self dismissViewControllerAnimated:YES completion:nil];
-        
-        _picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        [self presentViewController:_picker animated:YES completion:NULL];
-    }
-    else{
+
         ALAssetsLibrary* library;
         library = [[ALAssetsLibrary alloc] init];
         
@@ -102,11 +94,14 @@ BOOL grayflag=false;
         
         self.grayButton.enabled = true;
         self.BlurButton.enabled = true;
-    }
-        
 
 }
 
+
+-(void)modalViewDidDissmissed:(NSInteger)tag{
+    UIAlertView* alv = [[UIAlertView alloc] initWithTitle:@"Hello" message:[[NSString alloc] initWithFormat:@"%d", tag] delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
+    [alv show];
+}
 
 - (IBAction)GrayButtonAction:(id)sender {
     if(grayflag == false){
@@ -133,4 +128,18 @@ BOOL grayflag=false;
     UIImage* img2 = MatToUIImage(mat2);
     self.imageView.image = img2;
 }
+
+//追加　セグエが実行される前に毎回呼び出されるメソッド
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    UIAlertView* alv = [[UIAlertView alloc] initWithTitle:@"Hello" message:@"hello" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
+    [alv show];
+    
+    //通知先として自分を登録
+    imageViewController *modalView = (imageViewController *)segue.destinationViewController;
+    modalView.delegate = self;
+    modalView.str = @"HelloWorld";
+}
+
+
 @end

@@ -8,8 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import <AssetsLibrary/AssetsLibrary.h>
+@protocol imageViewDelegate<NSObject>
+-(void) modalViewDidDissmissed:(NSInteger)tag;
+@end
 
 @interface imageViewController : UIViewController<AVCaptureVideoDataOutputSampleBufferDelegate>
-- (IBAction)SnapButtonAction:(id)sender;
+{
+    id<imageViewDelegate> delegate;
+}
+
+@property(nonatomic, weak)id<imageViewDelegate> delegate;
+@property(nonatomic, weak)NSString* str;
+-(IBAction)dissmissModal:(id)sender;
 
 @end
+
+
