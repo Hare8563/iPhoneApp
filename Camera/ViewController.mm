@@ -32,16 +32,16 @@ BOOL grayflag=false;
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)showImagePicker:(id)sender {
-    UIImagePickerControllerSourceType sourceType
-    = UIImagePickerControllerSourceTypeCamera;
-    
-    if([UIImagePickerController isSourceTypeAvailable:sourceType]){
-        _picker.sourceType = sourceType;
-        _picker.delegate = self;
-        [self presentViewController:_picker animated:YES completion:NULL];
-    }
-}
+//- (IBAction)showImagePicker:(id)sender {
+//    UIImagePickerControllerSourceType sourceType
+//    = UIImagePickerControllerSourceTypeCamera;
+//    
+//    if([UIImagePickerController isSourceTypeAvailable:sourceType]){
+//        _picker.sourceType = sourceType;
+//        _picker.delegate = self;
+//        [self presentViewController:_picker animated:YES completion:NULL];
+//    }
+//}
 
 
 - (void)imagePickerController :(UIImagePickerController *)picker

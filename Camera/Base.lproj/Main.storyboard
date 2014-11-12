@@ -18,7 +18,7 @@
                                 <items>
                                     <barButtonItem title="Camera" id="YJn-jP-Sfj">
                                         <connections>
-                                            <action selector="showImagePicker:" destination="vXZ-lx-hvc" id="Xz7-0j-cNt"/>
+                                            <segue destination="Xr5-QD-fXt" kind="modal" id="djC-tR-f5J"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem width="112" style="plain" systemItem="fixedSpace" id="ib5-c9-1x1"/>
@@ -58,25 +58,49 @@
             </objects>
             <point key="canvasLocation" x="336" y="119"/>
         </scene>
+        <!--Image View Controller-->
+        <scene sceneID="bOZ-DN-Xp1">
+            <objects>
+                <viewController id="Xr5-QD-fXt" customClass="imageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lxJ-jF-wX5">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rpO-ZE-dn1"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6U-bO-6Tb">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="0sV-dx-PIp"/>
+                                    <constraint firstAttribute="height" constant="28" id="yfV-nA-GKZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="SNAP">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SnapButtonAction:" destination="Xr5-QD-fXt" eventType="touchUpInside" id="J2e-qZ-gqc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rpO-ZE-dn1" firstAttribute="top" secondItem="lxJ-jF-wX5" secondAttribute="top" type="default" id="3ju-RZ-stj"/>
+                            <constraint firstAttribute="bottom" secondItem="G6U-bO-6Tb" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="86a-CI-LVB"/>
+                            <constraint firstItem="rpO-ZE-dn1" firstAttribute="trailing" secondItem="lxJ-jF-wX5" secondAttribute="trailing" type="default" id="Lnp-nY-bjS"/>
+                            <constraint firstItem="G6U-bO-6Tb" firstAttribute="leading" secondItem="lxJ-jF-wX5" secondAttribute="leading" constant="124" id="ZEa-vP-HZB"/>
+                            <constraint firstItem="rpO-ZE-dn1" firstAttribute="bottom" secondItem="lxJ-jF-wX5" secondAttribute="bottom" type="default" id="dKU-f0-4aO"/>
+                            <constraint firstItem="rpO-ZE-dn1" firstAttribute="leading" secondItem="lxJ-jF-wX5" secondAttribute="leading" type="default" id="w29-Zc-cP2"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gHD-Dn-5g7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792" y="119"/>
+        </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="BlurButton:"/>
-                <relationship kind="action" name="GrayButtonAction:"/>
-                <relationship kind="outlet" name="BlurButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="grayButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
