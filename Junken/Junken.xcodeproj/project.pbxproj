@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E488A28159BED000000B494 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E488A27159BED000000B494 /* UIKit.framework */; };
+		2E488A2A159BED000000B494 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E488A29159BED000000B494 /* Foundation.framework */; };
+		2E488A2C159BED000000B494 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E488A2B159BED000000B494 /* CoreGraphics.framework */; };
+		2E488A32159BED010000B494 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E488A30159BED010000B494 /* InfoPlist.strings */; };
+		2E488A34159BED010000B494 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E488A33159BED010000B494 /* main.m */; };
+		2E488A38159BED010000B494 /* iOSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E488A37159BED010000B494 /* iOSAppDelegate.m */; };
+		2E488A3B159BED010000B494 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E488A39159BED010000B494 /* MainStoryboard.storyboard */; };
+		2E488A3E159BED010000B494 /* iOSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E488A3D159BED010000B494 /* iOSViewController.m */; };
+		2E488A46159BED010000B494 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E488A45159BED010000B494 /* SenTestingKit.framework */; };
+		2E488A47159BED010000B494 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E488A27159BED000000B494 /* UIKit.framework */; };
+		2E488A48159BED010000B494 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E488A29159BED000000B494 /* Foundation.framework */; };
+		2E488A50159BED010000B494 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E488A4E159BED010000B494 /* InfoPlist.strings */; };
+		2E488A53159BED010000B494 /* JunkenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E488A52159BED010000B494 /* JunkenTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E488A49159BED010000B494 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E488A1A159BECFF0000B494 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E488A22159BED000000B494;
+			remoteInfo = Junken;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2E488A23159BED000000B494 /* Junken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Junken.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E488A27159BED000000B494 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2E488A29159BED000000B494 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2E488A2B159BED000000B494 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2E488A2F159BED010000B494 /* Junken-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Junken-Info.plist"; sourceTree = "<group>"; };
+		2E488A31159BED010000B494 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2E488A33159BED010000B494 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2E488A35159BED010000B494 /* Junken-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Junken-Prefix.pch"; sourceTree = "<group>"; };
+		2E488A36159BED010000B494 /* iOSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSAppDelegate.h; sourceTree = "<group>"; };
+		2E488A37159BED010000B494 /* iOSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSAppDelegate.m; sourceTree = "<group>"; };
+		2E488A3A159BED010000B494 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		2E488A3C159BED010000B494 /* iOSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSViewController.h; sourceTree = "<group>"; };
+		2E488A3D159BED010000B494 /* iOSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSViewController.m; sourceTree = "<group>"; };
+		2E488A44159BED010000B494 /* JunkenTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JunkenTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E488A45159BED010000B494 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		2E488A4D159BED010000B494 /* JunkenTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JunkenTests-Info.plist"; sourceTree = "<group>"; };
+		2E488A4F159BED010000B494 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2E488A51159BED010000B494 /* JunkenTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JunkenTests.h; sourceTree = "<group>"; };
+		2E488A52159BED010000B494 /* JunkenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JunkenTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E488A20159BED000000B494 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E488A28159BED000000B494 /* UIKit.framework in Frameworks */,
+				2E488A2A159BED000000B494 /* Foundation.framework in Frameworks */,
+				2E488A2C159BED000000B494 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E488A40159BED010000B494 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E488A46159BED010000B494 /* SenTestingKit.framework in Frameworks */,
+				2E488A47159BED010000B494 /* UIKit.framework in Frameworks */,
+				2E488A48159BED010000B494 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E488A18159BECFF0000B494 = {
+			isa = PBXGroup;
+			children = (
+				2E488A2D159BED000000B494 /* Junken */,
+				2E488A4B159BED010000B494 /* JunkenTests */,
+				2E488A26159BED000000B494 /* Frameworks */,
+				2E488A24159BED000000B494 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2E488A24159BED000000B494 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E488A23159BED000000B494 /* Junken.app */,
+				2E488A44159BED010000B494 /* JunkenTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E488A26159BED000000B494 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E488A27159BED000000B494 /* UIKit.framework */,
+				2E488A29159BED000000B494 /* Foundation.framework */,
+				2E488A2B159BED000000B494 /* CoreGraphics.framework */,
+				2E488A45159BED010000B494 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2E488A2D159BED000000B494 /* Junken */ = {
+			isa = PBXGroup;
+			children = (
+				2E488A36159BED010000B494 /* iOSAppDelegate.h */,
+				2E488A37159BED010000B494 /* iOSAppDelegate.m */,
+				2E488A39159BED010000B494 /* MainStoryboard.storyboard */,
+				2E488A3C159BED010000B494 /* iOSViewController.h */,
+				2E488A3D159BED010000B494 /* iOSViewController.m */,
+				2E488A2E159BED010000B494 /* Supporting Files */,
+			);
+			path = Junken;
+			sourceTree = "<group>";
+		};
+		2E488A2E159BED010000B494 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E488A2F159BED010000B494 /* Junken-Info.plist */,
+				2E488A30159BED010000B494 /* InfoPlist.strings */,
+				2E488A33159BED010000B494 /* main.m */,
+				2E488A35159BED010000B494 /* Junken-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2E488A4B159BED010000B494 /* JunkenTests */ = {
+			isa = PBXGroup;
+			children = (
+				2E488A51159BED010000B494 /* JunkenTests.h */,
+				2E488A52159BED010000B494 /* JunkenTests.m */,
+				2E488A4C159BED010000B494 /* Supporting Files */,
+			);
+			path = JunkenTests;
+			sourceTree = "<group>";
+		};
+		2E488A4C159BED010000B494 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E488A4D159BED010000B494 /* JunkenTests-Info.plist */,
+				2E488A4E159BED010000B494 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E488A22159BED000000B494 /* Junken */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E488A56159BED010000B494 /* Build configuration list for PBXNativeTarget "Junken" */;
+			buildPhases = (
+				2E488A1F159BED000000B494 /* Sources */,
+				2E488A20159BED000000B494 /* Frameworks */,
+				2E488A21159BED000000B494 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Junken;
+			productName = Junken;
+			productReference = 2E488A23159BED000000B494 /* Junken.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2E488A43159BED010000B494 /* JunkenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E488A59159BED010000B494 /* Build configuration list for PBXNativeTarget "JunkenTests" */;
+			buildPhases = (
+				2E488A3F159BED010000B494 /* Sources */,
+				2E488A40159BED010000B494 /* Frameworks */,
+				2E488A41159BED010000B494 /* Resources */,
+				2E488A42159BED010000B494 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E488A4A159BED010000B494 /* PBXTargetDependency */,
+			);
+			name = JunkenTests;
+			productName = JunkenTests;
+			productReference = 2E488A44159BED010000B494 /* JunkenTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E488A1A159BECFF0000B494 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = iOS;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 2E488A1D159BECFF0000B494 /* Build configuration list for PBXProject "Junken" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2E488A18159BECFF0000B494;
+			productRefGroup = 2E488A24159BED000000B494 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E488A22159BED000000B494 /* Junken */,
+				2E488A43159BED010000B494 /* JunkenTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E488A21159BED000000B494 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E488A32159BED010000B494 /* InfoPlist.strings in Resources */,
+				2E488A3B159BED010000B494 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E488A41159BED010000B494 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E488A50159BED010000B494 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E488A42159BED010000B494 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E488A1F159BED000000B494 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E488A34159BED010000B494 /* main.m in Sources */,
+				2E488A38159BED010000B494 /* iOSAppDelegate.m in Sources */,
+				2E488A3E159BED010000B494 /* iOSViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E488A3F159BED010000B494 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E488A53159BED010000B494 /* JunkenTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E488A4A159BED010000B494 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E488A22159BED000000B494 /* Junken */;
+			targetProxy = 2E488A49159BED010000B494 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2E488A30159BED010000B494 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E488A31159BED010000B494 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2E488A39159BED010000B494 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E488A3A159BED010000B494 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		2E488A4E159BED010000B494 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E488A4F159BED010000B494 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E488A54159BED010000B494 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = Fake_Code_Sign;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = Fake_Code_Sign;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2E488A55159BED010000B494 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = Fake_Code_Sign;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = Fake_Code_Sign;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E488A57159BED010000B494 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Junken/Junken-Prefix.pch";
+				INFOPLIST_FILE = "Junken/Junken-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2E488A58159BED010000B494 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Junken/Junken-Prefix.pch";
+				INFOPLIST_FILE = "Junken/Junken-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2E488A5A159BED010000B494 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Junken.app/Junken";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Junken/Junken-Prefix.pch";
+				INFOPLIST_FILE = "JunkenTests/JunkenTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		2E488A5B159BED010000B494 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Junken.app/Junken";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Junken/Junken-Prefix.pch";
+				INFOPLIST_FILE = "JunkenTests/JunkenTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E488A1D159BECFF0000B494 /* Build configuration list for PBXProject "Junken" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E488A54159BED010000B494 /* Debug */,
+				2E488A55159BED010000B494 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E488A56159BED010000B494 /* Build configuration list for PBXNativeTarget "Junken" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E488A57159BED010000B494 /* Debug */,
+				2E488A58159BED010000B494 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E488A59159BED010000B494 /* Build configuration list for PBXNativeTarget "JunkenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E488A5A159BED010000B494 /* Debug */,
+				2E488A5B159BED010000B494 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E488A1A159BECFF0000B494 /* Project object */;
+}
